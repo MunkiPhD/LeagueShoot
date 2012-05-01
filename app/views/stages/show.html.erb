@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number of targets:</b>
+  <%= @stage.number_of_targets %>
+</p>
+
+<p>
+  <b>Match:</b>
+  <%= @stage.match_id %> - 
+  <%= @stage.match.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_stage_path(@stage) %> |
+<%= link_to 'Back', stages_path %>

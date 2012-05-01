@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Points down:</b>
+  <%= @stage_score.points_down %>
+</p>
+
+<p>
+  <b>No shoots:</b>
+  <%= @stage_score.no_shoots %>
+</p>
+
+<p>
+  <b>Procedurals:</b>
+  <%= @stage_score.procedurals %>
+</p>
+
+<p>
+  <b>Shot time:</b>
+  <%= @stage_score.shot_time %>
+</p>
+
+<p>
+  <b>Stage:</b>
+  <%= @stage_score.stage.name %>
+</p>
+
+<p>
+  <b>Shooter:</b>
+  <%= @stage_score.shooter.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_stage_score_path(@stage_score) %> |
+<%= link_to 'Back', stage_scores_path %>

@@ -1,0 +1,42 @@
+<%= form_for(@stage_score) do |f| %>
+  <% if @stage_score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stage_score.errors.count, "error") %> prohibited this stage_score from being saved:</h2>
+
+      <ul>
+      <% @stage_score.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :points_down %><br />
+    <%= f.number_field :points_down %>
+  </div>
+  <div class="field">
+    <%= f.label :no_shoots %><br />
+    <%= f.number_field :no_shoots %>
+  </div>
+  <div class="field">
+    <%= f.label :procedurals %><br />
+    <%= f.number_field :procedurals %>
+  </div>
+  <div class="field">
+    <%= f.label :shot_time %><br />
+    <%= f.time_select :shot_time %>
+  </div>
+  <div class="field">
+    <%= f.label :stage_id %><br />
+    <%= collection_select(:stage_score, :stage_id, @stages, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :shooter_id %><br />
+    <%= collection_select(:stage_score, :shooter_id, @shooters, :id, :name) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

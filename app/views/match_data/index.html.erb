@@ -1,0 +1,31 @@
+<h1>Listing match_data</h1>
+
+<table>
+  <tr>
+    <th>Squad</th>
+    <th>Lineup position</th>
+    <th>Match</th>
+    <th>Shooter</th>
+    <th>Division</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @match_data.each do |match_datum| %>
+  <tr>
+    <td><%= match_datum.squad %></td>
+    <td><%= match_datum.lineup_position %></td>
+    <td><%= match_datum.match_id %></td>
+    <td><%= match_datum.shooter_id %></td>
+    <td><%= match_datum.division_id %></td>
+    <td><%= link_to 'Show', match_datum %></td>
+    <td><%= link_to 'Edit', edit_match_datum_path(match_datum) %></td>
+    <td><%= link_to 'Destroy', match_datum, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Match datum', new_match_datum_path %>
