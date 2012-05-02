@@ -7,6 +7,7 @@
     <th>Procedurals</th>
     <th>Shot time</th>
     <th>Stage</th>
+    <th>Match</th>
     <th>Shooter</th>
     <th></th>
     <th></th>
@@ -20,7 +21,8 @@
     <td><%= stage_score.procedurals %></td>
     <td><%= stage_score.shot_time %></td>
     <td><%= stage_score.stage_id %></td>
-    <td><%= stage_score.shooter_id %></td>
+    <td><%= stage_score.stage.match.title %></td>
+    <td><%= stage_score.shooter.name %></td>
     <td><%= link_to 'Show', stage_score %></td>
     <td><%= link_to 'Edit', edit_stage_score_path(stage_score) %></td>
     <td><%= link_to 'Destroy', stage_score, confirm: 'Are you sure?', method: :delete %></td>

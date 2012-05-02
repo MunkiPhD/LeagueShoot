@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Name</th>
     <th>Number of targets</th>
     <th>Match</th>
     <th></th>
@@ -11,8 +12,9 @@
 
 <% @stages.each do |stage| %>
   <tr>
+    <td><%= stage.name %></td>
     <td><%= stage.number_of_targets %></td>
-    <td><%= stage.match_id %></td>
+    <td><%= stage.match.title %></td>
     <td><%= link_to 'Show', stage %></td>
     <td><%= link_to 'Edit', edit_stage_path(stage) %></td>
     <td><%= link_to 'Destroy', stage, confirm: 'Are you sure?', method: :delete %></td>
