@@ -1,14 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  squad: MyString
+steve:
+  squad: A
   lineup_position: 1
   match_id: 1
   shooter_id: 1
   division_id: 1
 
+three:
+  squad: A
+  lineup_position: 2
+  match_id: 1
+  shooter_id: 2
+  division_id: 1
+
 two:
-  squad: MyString
+  squad: B
   lineup_position: 1
   match_id: 1
   shooter_id: 1

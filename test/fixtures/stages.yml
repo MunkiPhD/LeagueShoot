@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  number_of_targets: 1
+stage_one:
+  name: StageOne
+  number_of_targets: 10
   match_id: 1
 
-two:
-  number_of_targets: 1
+stage_two:
+  name: StageTwo
+  number_of_targets: 11
   match_id: 1
+
+stage_three:
+  name: StageThree
+  number_of_targers: 20
+  match_id: 2
