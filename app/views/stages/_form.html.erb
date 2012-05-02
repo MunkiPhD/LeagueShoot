@@ -15,14 +15,27 @@
     <%= f.label :number_of_targets %><br />
     <%= f.number_field :number_of_targets %>
   </div>
-  <div class="field">
-    <%= f.label :match_id %><br />
-    <%= collection_select(:stage, :match_id, @matches, :id, :title) %>
-  </div>
 
   <div class="field">
     <%= f.label :name %><br />
     <%= f.number_field :name %>
+  </div>
+
+  <div>
+    <h3>Debug</h3>
+    <% if !@match.nil? %>
+      <%= @match.title %>
+
+      <div class="field">
+        <%= f.hidden_field :match_id, :value => @match.id %>
+      </div>
+    <% else %>
+      <div class="field">
+        <%= f.label :match_id %><br />
+        <%= collection_select(:stage, :match_id, @matches, :id, :title) %>
+      </div>
+    <% end %>
+    <h3>/Debug</h3>
   </div>
   <div class="actions">
     <%= f.submit %>

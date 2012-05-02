@@ -14,6 +14,7 @@ class StagesController < ApplicationController
   # GET /stages/1.json
   def show
     @stage = Stage.find(params[:id])
+    @stage_scores = StageScore.where(:stage_id => @stage.id).includes(:shooter).all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,12 @@ class StagesController < ApplicationController
   # GET /stages/new
   # GET /stages/new.json
   def new
-    @stage = Stage.new
+    @match = Match.find(params[:mid])
+    if @match.nil?
+      @stage = Match.stage.build()
+    else
+      @stage = Stage.new
+    end
     @matches = Match.all
 
     respond_to do |format|
@@ -35,6 +41,7 @@ class StagesController < ApplicationController
 
   # GET /stages/1/edit
   def edit
+    @matches = Match.all
     @stage = Stage.find(params[:id])
   end
 

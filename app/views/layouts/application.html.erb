@@ -12,6 +12,7 @@
 
 <hr>
 <ul>
+  <li><%= link_to "home", root_path %>
   <li><%= link_to "Divisions", divisions_path %>
   <li><%= link_to "Matches", matches_path %>
   <li><%= link_to "Match Data", match_data_path %>
@@ -26,6 +27,9 @@
   <li>When creating a stage, you have to make it through a match. IE can't make a stage then assign it to a match (yet - required filtering)
   <li>Creating a StageScore can only be done through the person currently in line/should only show stages in the match, and people in the match (pull from MatchData)
   <li>Modify shot time to be in minutes:seconds:milliseconds on StageScore
+  <li>Create a match, add stages
+  <li>Register for match, and then you get put on a squad
+  <br>
   <li>Stage Leaderboards
   <li>Match Leaderboards
   <li>League Leaderboards

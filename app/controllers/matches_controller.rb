@@ -14,6 +14,7 @@ class MatchesController < ApplicationController
   # GET /matches/1.json
   def show
     @match = Match.find(params[:id])
+    @stages = @match.stages
 
     respond_to do |format|
       format.html # show.html.erb

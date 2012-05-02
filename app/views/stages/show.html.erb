@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+<p>
+<b>Name:</b> <%= @stage.name %>
+</p>
 
 <p>
   <b>Number of targets:</b>
@@ -10,6 +13,16 @@
   <%= @stage.match_id %> - 
   <%= @stage.match.title %>
 </p>
+
+<% if @stage_scores.count > 0 %>
+  <ul>
+  <% @stage_scores.each do |score| %>
+    <li><%= score.shooter.name %> | Points down: <%= score.points_down %>
+  <% end %>
+</ul>
+<% else %>
+  <b>No scores recorded.</b>
+<% end %>
 
 
 <%= link_to 'Edit', edit_stage_path(@stage) %> |
